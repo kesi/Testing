@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Parallel test suite" parallel="tests" thread-count="10" >
+
+
+
+	 <test name="ChromeTest">
+        <parameter name="browser" value="chrome" />
+        <parameter name="appUrl" value="http://qa.xtbills.com" />
+        <classes>
+             <class name="common.Tesing"/>
+        </classes>
+    </test>
+   
+   
+   <test name="FirefoxTest">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="appUrl" value="http://qa.xtbills.com"/>
+       <classes>
+              <class name="common.Tesing"/>
+         </classes>
+    </test> 
+    
+    <test name="IETest">
+        <parameter name="browser" value="IE" />
+        <parameter name="appUrl" value="http://qa.xtbills.com" />
+        <classes>
+             <class name="common.Tesing"/>
+        </classes>
+    </test>
+    
+	</suite> 

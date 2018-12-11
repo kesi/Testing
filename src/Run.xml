@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+ <suite name="BranchSmokeSuite" parallel="tests" verbose="1"> 
+<!-- <suite name="BranchSmokeSuite" parallel="false" verbose="1"> -->
+    <listeners>
+          <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+          <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+          <listener class-name="common.ExtentReportNG" />
+     </listeners>
+
+
+
+    <test name="ChromeTest">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="appUrl" value="http://branch-1-11.vibeoffice.com/"/>
+
+        <classes>
+            <class name="common.DriverInitializer"/> 
+            <class name="common.LoginCredentials"/>
+
+            <class name="vibe.calendar.tests.Calendar_Tests"> 
+            <methods>
+                <include name="createNewCalendarEvent"></include>
+            </methods>
+        </class> 
+        </classes>
+    </test>
+
+    <test name="FirefoxTest">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="appUrl" value="http://branch-1-11.vibeoffice.com/"/>
+
+        <classes>
+            <class name="common.DriverInitializer"/> 
+            <class name="common.LoginCredentials"/>
+            <class name="vibe.calendar.tests.Calendar_Tests"> 
+            <methods>
+                <include name="createNewCalendarEvent"></include>
+            </methods>
+        </class> 
+        </classes>
+    </test>
+
+
+</suite> 

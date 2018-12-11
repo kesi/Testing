@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="10" name="Failed suite [Parallel test suite]" parallel="tests">
+  <parameter name="appUrl" value="http://qa.xtbills.com"/>
+  <parameter name="browser" value="IE"/>
+  <test name="IETest(failed)" parallel="tests">
+    <parameter name="appUrl" value="http://qa.xtbills.com"/>
+    <parameter name="browser" value="IE"/>
+    <classes>
+      <class name="common.Tesing">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="openBrowser"/>
+          <include name="openBrowser"/>
+          <include name="f"/>
+          <include name="close"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- common.Tesing -->
+    </classes>
+  </test> <!-- IETest(failed) -->
+</suite> <!-- Failed suite [Parallel test suite] -->

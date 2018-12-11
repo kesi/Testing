@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [BranchSmokeSuite]" parallel="tests">
+  <parameter name="appUrl" value="http://qa.xtbills.com/"/>
+  <parameter name="browser" value="chrome"/>
+  <test name="ChromeTest(failed)" parallel="tests">
+    <parameter name="appUrl" value="http://qa.xtbills.com/"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="common.DriverInitializer">
+        <methods>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- common.DriverInitializer -->
+      <class name="common.Tesing">
+        <methods>
+          <include name="f"/>
+          <include name="f1"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- common.Tesing -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+</suite> <!-- Failed suite [BranchSmokeSuite] -->

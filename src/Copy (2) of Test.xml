@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+ <suite name="BranchSmokeSuite" parallel="tests" verbose="1"> 
+   
+    <test name="ChromeTest">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="appUrl" value="http://qa.xtbills.com/"/>
+        <classes>
+            <class name="common.DriverInitializer"/> 
+             <class name="common.Tesing"/> 
+            
+        </classes>
+    </test>
+
+     <test name="FirefoxTest">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="appUrl" value="http://qa.xtbills.com"/>
+
+        <classes>
+            <class name="common.DriverInitializer"/> 
+        	  <class name="common.CopyOfTesing"/> 
+            
+        </classes>
+    </test>
+
+
+</suite> 
