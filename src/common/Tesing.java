@@ -19,6 +19,8 @@ public class Tesing extends DriverInitializer  {
 		getDriver().findElement(By.id("BtnLogin")).click();
 		getDriver().findElement(By.id("cpBody_gvParentGrid_lnk_0")).click();
 		System.out.println("github");
+		System.out.println("github1");
+		System.out.println("github2");
   }
 	
 	@AfterClass
